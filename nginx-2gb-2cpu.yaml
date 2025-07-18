@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-2gb-2cpu
+  labels:
+    app: nginx-2gb-2cpu
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    resources:
+      requests:
+        memory: "2Gi"
+        cpu: "2000m"
+      limits:
+        memory: "2Gi"
+        cpu: "2000m"
+    ports:
+    - containerPort: 80

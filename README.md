@@ -93,6 +93,19 @@ Three nginx pods with different resource requirements to test node scheduling:
 
 let's start: `k9s` -> :`pods` it will show all the pods informations, we will keep the terminal open to view pod in realtime
 
+```bash
+ Context: k3d-mycluster [RW]                       <0> all       <a>       Attach       <ctrl-k>  Kill            <o> Show Node         ____  __ ________        
+ Cluster: k3d-mycluster                            <1> default   <ctrl-d>  Delete       <l>       Logs            <f> Show PortForward |    |/  /   __   \______ 
+ User:    admin@k3d-mycluster                                    <d>       Describe     <p>       Logs Previous   <t> Transfer         |       /\____    /  ___/ 
+ K9s Rev: v0.50.9                                                <e>       Edit         <shift-f> Port-Forward    <y> YAML             |    \   \  /    /\___  \ 
+ K8s Rev: v1.31.5+k3s1                                           <?>       Help         <z>       Sanitize                             |____|\__ \/____//____  / 
+ CPU:     1%                                                     <shift-j> Jump Owner   <s>       Shell                                         \/           \/  
+ MEM:     2%                                                                                                                                                     
+┌──────────────────────────────────────────────────────────────────────── pods(all)[12] ────────────────────────────────────────────────────────────────────────┐
+│ NAMESPACE↑   NAME                                     PF READY STATUS     RESTARTS CPU %CPU/R %CPU/L MEM %MEM/R %MEM/L IP         NODE                    AGE │
+```
+
+
 now open another terminal start deploy `nginx-3gb-100mcpu.yaml`
 ```bash
 kubectl apply -f nginx-3gb-100mcpu.yaml
